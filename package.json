@@ -1,7 +1,7 @@
 {
-  "name": "social-network",
+  "name": "odontoprev",
   "version": "1.0.0",
-  "description": "Social Network @ Laboratoria",
+  "description": "Odontoprev @ Laboratoria",
   "main": "src/index.html",
   "keywords": [
     "javascript",
