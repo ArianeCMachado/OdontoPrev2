@@ -1,8 +1,4 @@
-//import { getDentists, getPatients, getSchedule, initDados } from "../../lib/storage.js";
-
-// if (localStorage.length == 0) {
-//   initDados();
-// }
+// import { getDentists, getPatients, getSchedule } from "../../lib/storage.js";
 
 // const dentistsData = getDentists();
 // const patientsData = getPatients();
@@ -10,7 +6,11 @@
 // console.log(dentistsData);
 
 // console.log(dentistsData, patientsData, scheduleData)
-// const data = [...dentistsData, ...patientsData, ...scheduleData];
+// const data = {
+//   dentists: dentistsData,
+//   patients: patientsData,
+//   schedules: scheduleData
+// }
 // console.log(data)
 // console.log(data[3].name)
 
@@ -20,8 +20,8 @@ export default () => {
         <div class="appointment-container">
           <span class="dentist-info">
             <img src="./assets/icons/others/user-female.svg" alt="dentist picture">
-            <p class="dentist-name">${dentistsData[0].name}</p>
-            <p class="dentist-cro">${dentistsData[0].cro}</p>
+            <p class="dentist-name"></p>
+            <p class="dentist-cro"></p>
           </span>
           <section class="schedule">
             <h1>Agenda de consultas</h1>
@@ -39,12 +39,12 @@ export default () => {
 
   const printAppointment = (appointments) => {
     const appointmentTemplate = appointments
-      .map((appointment) => {
+      .map(() => {
         appointmentInfo.innerHTML = `
         <div>
-          <p class="patient-name">Paciente: ${appointment.patientName}</p>
-          <p class="appointment-date">Dia da consulta: ${appointment.date}</p>
-          <p class="appointment-time">Horário da consulta: ${appointment.time}</p>
+          <p class="patient-name">Paciente: </p>
+          <p class="appointment-date">Dia da consulta: </p>
+          <p class="appointment-time">Horário da consulta: </p>
         </div>
         `;
       })
