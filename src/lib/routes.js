@@ -14,6 +14,7 @@ const initScreens = () => {
       main.appendChild(home());
       break;
     case '#login-dentist':
+      main.innerHTML = '';
       main.appendChild(loginDentist());
       break;
     case '#login-patient':
