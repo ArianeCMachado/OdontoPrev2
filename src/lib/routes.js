@@ -6,7 +6,6 @@ import schedule from '../pages/schedule/schedule.js';
 import appointment from '../pages/appointment/appointment.js';
 import { getDentists, initData } from './storage.js';
 
-
 const main = document.querySelector('.main');
 const initScreens = () => {
   main.innerHTML = '';
@@ -22,6 +21,7 @@ const initScreens = () => {
       break;
     case '#schedule':
       main.appendChild(schedule());
+
       break;
       case '#appointment':
         main.appendChild(appointment());
@@ -42,6 +42,3 @@ window.addEventListener('load', () => {
 if(localStorage.length==0){
   initData();
 }
-
-// const dentists = getDentists();
-// console.log(dentists[0].name);
